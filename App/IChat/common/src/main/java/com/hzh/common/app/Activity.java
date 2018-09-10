@@ -20,7 +20,8 @@ public abstract class Activity extends AppCompatActivity{
         initWindows();
 
         if (initArgs(getIntent().getExtras())){
-            getContentLayoutId();
+            int layoutId = getContentLayoutId();
+            setContentView(layoutId);
             initWidget();
             initData();
         }else{
